@@ -3,7 +3,7 @@ import TodoList from './components/TodoList';
 
 import { useState, useEffect } from 'react';
 
-import { getTodos } from './api/endpoints';
+import { createTodo, getTodos } from './api/endpoints';
 
 import AddTodo from './components/AddTodo';
 
@@ -19,6 +19,11 @@ function App() {
     }
     fetchTodos();
   }, []);
+
+  const addTodo = async (todo_name) => {
+    createTodo(todo_name);
+  }
+
 
   return (
     <div className="App">

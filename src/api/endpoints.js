@@ -21,3 +21,8 @@ export const delete_todo = async (id) => {
     // response.data is a property provided by Axios, which contains the data payload from the server's response.
     return response.data;
 }
+
+export const update_todo = async (id, completed) => {
+    const response = await axios.patch(`${POST_URL}/${id}`, { 'completed': completed });
+    return response.data;
+}

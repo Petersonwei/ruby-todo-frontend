@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 
 import { getTodos } from './api/endpoints';
 
+import AddTodo from './components/AddTodo';
+
 function App() {
 
   const [todos, setTodos] = useState([]);
@@ -22,6 +24,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <h1 className="title">TODO LIST</h1>
+        <AddTodo />
         <TodoList todos={todos} />
       </div>
     </div>

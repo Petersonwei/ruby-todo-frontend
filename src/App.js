@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <h1 className="title">TODO LIST</h1>
-        <TodoList />
+        <TodoList todos={todos} />
       </div>
     </div>
   );

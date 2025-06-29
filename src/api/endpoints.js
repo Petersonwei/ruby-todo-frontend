@@ -10,5 +10,6 @@ export const getTodos = async () => {
 }
 
 export const createTodo = async (todo_name) => {
-    const response = await axios.post(POST_URL, { 'todo_name': todo_name, 'completed': false });
+    const response = await axios.post(POST_URL, { todo: { 'todo_name': todo_name, 'completed': false } });
+    return response.data;
 }

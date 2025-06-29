@@ -20,8 +20,12 @@ function App() {
     fetchTodos();
   }, []);
 
+  // Function to add a new todo item
   const addTodo = async (todo_name) => {
-    createTodo(todo_name);
+    // Call the createTodo function to add the new todo item to the backend
+    const todo = await createTodo(todo_name);
+    // Update the local state with the new todo item by appending it to the existing list of todos
+    setTodos([...todos, todo]);
   }
 
 

@@ -28,13 +28,17 @@ function App() {
     setTodos([...todos, todo]);
   }
 
+  const deleteTodo = async (id) => {
+    deleteTodo(id);
+  }
+
 
   return (
     <div className="App">
       <div className="app-container">
         <h1 className="title">TODO LIST</h1>
         <AddTodo addTodo={addTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} deleteTodo={deleteTodo} />
       </div>
     </div>
   );

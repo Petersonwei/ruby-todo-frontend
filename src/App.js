@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <h1 className="title">TODO LIST</h1>
-        <AddTodo />
+        <AddTodo addTodo={addTodo} />
         <TodoList todos={todos} />
       </div>
     </div>
